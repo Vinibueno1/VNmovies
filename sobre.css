@@ -1,100 +1,191 @@
-/* Estilos para a Navbar */
+/* Estilos gerais do corpo */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #4e384e; /* Cor de fundo suave */
+  color: #333; /* Cor de texto */
+  line-height: 1.6;
+}
+
+/* Navbar fixada no topo */
 .navbar {
-    background-color: #333;
-    overflow: hidden;
+  background-color: #4e384e; /* Cor de fundo azul */
+  padding: 10px 20px;
+  color: white;
+}
+
+/* Seção Sobre */
+#sobre {
+  padding: 80px 20px 20px; /* Espaço superior para evitar sobreposição com navbar fixa */
+  text-align: center;
+  background-color: #ffffff; /* Cor de fundo branca */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Título da seção Sobre */
+#sobre h2 {
+  font-size: 36px;
+  color: #007bff; /* Cor azul para o título */
+  margin-bottom: 30px;
+}
+
+/* Card sobre mim */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto; /* Centraliza o card */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+  border: 3px solid black;
+}
+
+/* Efeito hover no card */
+.card:hover {
+  transform: translateY(-5px); /* Eleva o card ao passar o mouse */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+}
+
+/* Imagem do card */
+.card-img {
+  width: 150px; /* Diminuir a foto */
+  height: 150px; /* Manter a altura proporcional */
+  border-radius: 50%; /* Tornar a imagem redonda */
+  margin: 0 auto 20px; /* Centraliza a imagem e adiciona margem inferior */
+  display: block;
+  object-fit: cover; /* Garante que a imagem se encaixe bem */
+}
+
+/* Conteúdo do card */
+.card-content {
+  font-size: 16px;
+  color: #555;
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Título dentro do card */
+.card-content h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center; /* Título centralizado */
+}
+
+/* Estilo para a lista de informações */
+.card-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+.card-content ul li {
+  margin-bottom: 10px;
+}
+
+.card-content ul li strong {
+  color: #007bff;
+}
+
+/* Estilo para o parágrafo do card "Sobre o Site" */
+.card-content p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+/* Detalhes do site */
+#detalhes-site {
+  background-color: #f8f9fa; /* Cor de fundo clara */
+  border-radius: 10px;
+  padding: 25px; /* Mais espaçamento interno */
+  margin-top: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra mais suave e difusa */
+  transition: box-shadow 0.3s ease-in-out; /* Transição suave para o efeito de hover */
+}
+
+#detalhes-site:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Efeito de hover - sombra mais intensa */
+}
+
+#detalhes-site h3 {
+  font-size: 26px; /* Tamanho maior para o título */
+  color: #007bff; /* Cor azul vibrante */
+  margin-bottom: 20px;
+  text-transform: uppercase; /* Torna o título mais impactante */
+  font-weight: bold; /* Deixa o título em negrito */
+  text-align: center; /* Título centralizado */
+}
+
+#detalhes-site p {
+  font-size: 18px; /* Aumenta o tamanho da fonte para o parágrafo */
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  text-align: justify; /* Melhora a legibilidade do parágrafo */
+  text-indent: 30px; /* Indentação no início do parágrafo */
+}
+
+#detalhes-site ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+#detalhes-site ul li {
+  margin-bottom: 12px; /* Maior espaçamento entre os itens */
+  font-size: 16px;
+  color: #333; /* Cor de texto escura para contraste */
+  display: flex;
+  align-items: center; /* Alinha ícones e texto */
+}
+
+#detalhes-site ul li::before {
+  content: '✔'; /* Ícone de check para os itens da lista */
+  margin-right: 12px; /* Espaço entre o ícone e o texto */
+  color: #007bff; /* Cor azul para os ícones */
+  font-size: 18px; /* Tamanho maior para o ícone */
+}
+
+/* Responsividade - Ajustes específicos para "Sobre o Site" */
+@media (max-width: 768px) {
+  #detalhes-site {
+    padding: 20px; /* Menos padding em telas menores */
   }
-  
-  .navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+
+  #detalhes-site h3 {
+    font-size: 22px; /* Ajuste de tamanho do título */
   }
-  
-  .navbar li {
-    float: left;
+
+  #detalhes-site p {
+    font-size: 16px; /* Ajuste de tamanho do parágrafo */
   }
-  
-  .navbar li a {
-    display: block;
-    padding: 14px 20px;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    text-decoration: none;
+
+  #detalhes-site ul li {
+    font-size: 14px; /* Ajuste de tamanho da lista */
   }
-  
-  .navbar li a:hover {
-    background-color: #111;
+}
+
+@media (max-width: 480px) {
+  #detalhes-site {
+    padding: 15px; /* Mais redução no padding */
   }
-  
-  /* Seções */
-  section {
-    padding: 50px;
-    margin-top: 20px;
+
+  #detalhes-site h3 {
+    font-size: 20px; /* Ajuste de tamanho do título */
   }
-  /* Sobre */
-  section#sobre {
-    background-color: #000000;
+
+  #detalhes-site p {
+    font-size: 14px; /* Ajuste de tamanho do parágrafo */
   }
-  
-  /* Títulos */
-  h1, h2, h3 {
-    text-align: center;
+
+  #detalhes-site ul li {
+    font-size: 12px; /* Ajuste de tamanho da lista */
   }
-  
-  h2 {
-    margin-bottom: 20px;
-  }
-  
-  /* Estilos do Card */
-  .card {
-    display: flex;
-    flex-direction: row;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 20px;
-    align-items: center;
-  }
-  
-  .card-img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-right: 20px;
-  }
-  
-  .card-content {
-    max-width: 600px;
-  }
-  
-  .card-content h3 {
-    font-size: 24px;
-    color: #000000;
-    margin-bottom: 10px;
-  }
-  
-  .card-content p {
-    font-size: 16px;
-    color: #000000;
-    margin-bottom: 15px;
-  }
-  
-  .card-content ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .card-content ul li {
-    font-size: 14px;
-    color: #333;
-    margin-bottom: 5px;
-  }
-  
-  .card-content ul li strong {
-    color: #333;
-  }
-  
+}
+
