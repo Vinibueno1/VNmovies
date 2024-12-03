@@ -6,6 +6,7 @@ const media = params.get('media');
 // Ao carregar a pagina executa as funções de buscar os dados
 document.addEventListener("DOMContentLoaded", async () => {
     await getMovie();
+    toggleLoading();
 });
 
 async function getMovie() {
@@ -25,7 +26,7 @@ async function getMovie() {
     detalhes.innerHTML = `<h1>${movie.title ?? movie.name}</h1>
         <h5 class='mb-4'Titulo Original:
         >${movie.original_title ?? movie.original_name}</h5>
-    <p class='mb-1'>Data de Estreia: ${movie.release_date}</p>
+    <p class='mb-1'>Data de Estreia: ${formatarData(movie.release_date)}</p>
     <p class='mb-1'>País de Origem: ${movie.origin_country}</p>
     <p class='mb-1'>Popularidade: ${movie.popularity.toFixed(1)}</p>
     <p class='mb-1'>Status: ${movie.status}</p>
