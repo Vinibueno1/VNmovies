@@ -33,21 +33,21 @@ body {
 
 /* Card sobre mim */
 .card {
-  background-color: #f8f4ff57;
+  background-color: #000000;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgb(197, 211, 255);
+  box-shadow: 0 4px 8px rgb(186, 187, 192);
   max-width: 800px;
   margin: 20px auto; /* Centraliza o card */
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding: 20px;
-  border: 3px solid rgb(250, 250, 250);
+  border: 3px solid rgb(255, 6, 6);
 }
 
 /* Efeito hover no card */
 .card:hover {
   transform: translateY(-5px); /* Eleva o card ao passar o mouse */
-  box-shadow: 0 8px 16px rgb(150, 12, 168); /* Sombra mais forte */
+  box-shadow: 0 8px 16px rgb(255, 0, 0); /* Sombra mais forte */
 }
 
 /* Imagem do card */
@@ -110,7 +110,7 @@ body {
 }
 
 #detalhes-site:hover {
-  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.15); /* Efeito de hover - sombra mais intensa */
+  box-shadow: 0 6px 15px rgba(240, 30, 30, 0.15); /* Efeito de hover - sombra mais intensa */
 }
 
 #detalhes-site h3 {
